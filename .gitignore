@@ -1,0 +1,24 @@
+# Local files
+.DS_Store
+.env
+.env.*
+*.log
+# Earlier asset variants retained locally
+/img/action-play-poster.webp
+/img/action-play-ui-poster.webp
+/img/city.webp
+/img/dream-shift-poster.webp
+/img/hero-poster.webp
+/img/keyart.webp
+/img/library.webp
+/img/neon-run-poster.webp
+/img/noir.webp
+/img/portal.webp
+/img/sphere.webp
+/img/v3-ability-action.webp
+/img/v3-world-neon.webp
+/media/action-play.mp4
+/media/dream-shift.mp4
+/media/dream-switch.webm
+/media/hero.webm
+/media/neon-run.mp4
