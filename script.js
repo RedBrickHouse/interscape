@@ -75,6 +75,7 @@
     document.body.classList.toggle('dialog-open', open);
     if (open) pausePageVideos();
     else if (ready) playVideo();
+    updateMotionLabel();
   }
   function closeOnBackdrop(event) {
     const modal = event.currentTarget;
@@ -181,8 +182,32 @@
   let inView = true;
   let loading = null;
   let mediaURL = null;
+
+  // Observe each section, since the drifting layers extend beyond its edges.
+  const fogSections = new Map();
+  document.querySelectorAll('.fog-layer').forEach(layer => {
+    const section = layer.closest('.hero, .dreams, .closing');
+    if (!section) return;
+    if (!fogSections.has(section)) fogSections.set(section, { layers: [], visible: false });
+    fogSections.get(section).layers.push(layer);
+  });
+  function syncFogMotion() {
+    const allowed = !document.hidden && !reducedMotion.matches && !navigator.connection?.saveData && !hasOpenDialog() && !manuallyPaused;
+    fogSections.forEach(({ layers, visible }) => {
+      layers.forEach(layer => layer.classList.toggle('is-drifting', allowed && visible));
+    });
+  }
+  const fogObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => { fogSections.get(entry.target).visible = entry.isIntersecting && entry.intersectionRatio > 0; });
+    updateMotionLabel();
+  }, { threshold: 0.01 });
+  fogSections.forEach((_, section) => fogObserver.observe(section));
+  navigator.connection?.addEventListener?.('change', updateMotionLabel);
+
   function updateMotionLabel() {
-    const playing = !video.paused;
+    syncFogMotion();
+    motionButton.hidden = !ready && (!fogSections.size || reducedMotion.matches || Boolean(navigator.connection?.saveData));
+    const playing = !video.paused || Boolean(document.querySelector('.fog-layer.is-drifting'));
     const key = playing ? 'motionPause' : 'motionPlay';
     motionButton.setAttribute('aria-pressed', String(playing));
     motionButton.dataset.i18nAria = key;
@@ -226,8 +251,9 @@
     }
   }
   motionButton.addEventListener('click', async () => {
-    if (video.paused) { manuallyPaused = false; await playVideo(true); }
-    else { manuallyPaused = true; explicitPlayback = false; video.pause(); }
+    const backgroundActive = !video.paused || Boolean(document.querySelector('.fog-layer.is-drifting'));
+    if (backgroundActive) { manuallyPaused = true; explicitPlayback = false; video.pause(); }
+    else { manuallyPaused = false; updateMotionLabel(); await playVideo(true); }
     updateMotionLabel();
   });
   video.addEventListener('play', () => {
@@ -243,13 +269,16 @@
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) video.pause();
     else if (ready) playVideo();
+    updateMotionLabel();
   });
   reducedMotion.addEventListener('change', () => {
     explicitPlayback = false;
     if (reducedMotion.matches) { video.pause(); video.classList.remove('is-ready'); }
     else playVideo();
+    updateMotionLabel();
   });
   if (!reducedMotion.matches && !navigator.connection?.saveData) {
+    if (fogSections.size) { motionButton.hidden = false; updateMotionLabel(); }
     if ('requestIdleCallback' in window) requestIdleCallback(() => playVideo(), { timeout: 1800 });
     else setTimeout(() => playVideo(), 700);
   }
