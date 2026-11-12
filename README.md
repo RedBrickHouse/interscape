@@ -20,7 +20,9 @@ GitHub Pages serves the root of the `main` branch. The review version retains `n
 
 ## Presentation
 
-Soft image edges and slow, decorative fog connect the game scenes. Text, gameplay controls and enlarged screenshots remain sharp. The background-motion button pauses both the video and fog; decorative motion also stops outside the viewport, behind dialogs, in hidden tabs, and when reduced motion or data saving is enabled.
+The opening uses the official floating-astronaut artwork, with the title above and the invitation below. Full-width story and gallery landscapes blend into a slate background; gameplay abilities use keyboard-accessible tabs, independently of the two playable video examples. News appears as a compact editorial list.
+
+Slow decorative fog pauses outside the viewport, behind dialogs, in hidden tabs, and when reduced motion or data saving is enabled. The background-motion button also pauses it manually. Text, native video controls and enlarged screenshots stay sharp.
 
 ## Assets
 

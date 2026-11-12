@@ -74,7 +74,6 @@
     const open = hasOpenDialog();
     document.body.classList.toggle('dialog-open', open);
     if (open) pausePageVideos();
-    else if (ready) playVideo();
     updateMotionLabel();
   }
   function closeOnBackdrop(event) {
@@ -112,6 +111,16 @@
   }
 
   // Reflect the chapter in view without changing the visitor's scroll position.
+  const header = document.querySelector('.site-header');
+  if (header) {
+    let headerFramePending = false;
+    const updateHeader = () => { header.classList.toggle('is-scrolled', scrollY > 40); headerFramePending = false; };
+    addEventListener('scroll', () => {
+      if (!headerFramePending) { headerFramePending = true; requestAnimationFrame(updateHeader); }
+    }, { passive: true });
+    addEventListener('pageshow', updateHeader);
+    updateHeader();
+  }
   const chapterLinks = [...document.querySelectorAll('.chapter-nav a[href^="#"]')];
   const chapters = chapterLinks.map(link => ({ link, section: document.getElementById(link.hash.slice(1)) })).filter(item => item.section);
   if (chapters.length) {
@@ -131,6 +140,36 @@
     }, { rootMargin: '-12% 0px -50% 0px', threshold: [0, 0.1, 0.5, 1] });
     chapters.forEach(({ section }) => chapterObserver.observe(section));
   }
+
+  // Ability descriptions are independent of the two playable video examples.
+  const abilityButtons = [...document.querySelectorAll('[data-ability-to]')];
+  const abilityPanels = [...document.querySelectorAll('[data-ability-panel]')];
+  function showAbility(index, focus = false) {
+    const selected = abilityButtons.find(button => Number(button.dataset.abilityTo) === index);
+    if (!selected) return;
+    abilityButtons.forEach(button => {
+      const active = button === selected;
+      button.setAttribute('aria-selected', String(active));
+      button.tabIndex = active ? 0 : -1;
+    });
+    abilityPanels.forEach(panel => { panel.hidden = Number(panel.dataset.abilityPanel) !== index; });
+    if (focus) selected.focus();
+  }
+  abilityButtons.forEach((button, index) => {
+    button.addEventListener('click', () => showAbility(Number(button.dataset.abilityTo)));
+    button.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % abilityButtons.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + abilityButtons.length) % abilityButtons.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = abilityButtons.length - 1;
+      else return;
+      event.preventDefault();
+      showAbility(Number(abilityButtons[next].dataset.abilityTo), true);
+    });
+  });
+  const initialAbility = abilityButtons.find(button => button.getAttribute('aria-selected') === 'true') || abilityButtons[0];
+  if (initialAbility) showAbility(Number(initialAbility.dataset.abilityTo));
 
   // Keep the playable examples beside their descriptions; playback is visitor-controlled.
   const gameplayVideo = document.querySelector('#gameplay-video');
@@ -166,22 +205,16 @@
   const exampleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (!entry.isIntersecting) entry.target.pause(); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('video:not(#hero-video)').forEach(media => {
+  document.querySelectorAll('video').forEach(media => {
     exampleObserver.observe(media);
     media.addEventListener('play', () => { if (hasOpenDialog() || document.hidden) media.pause(); });
   });
   document.addEventListener('visibilitychange', () => { if (document.hidden) pausePageVideos(); });
 
-  // Download the small muted loop before playing, with a still image fallback.
-  const video = document.querySelector('#hero-video');
+  // Only visible fog moves, and visitor and system preferences always take precedence.
   const motionButton = document.querySelector('#motion-toggle');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let ready = false;
   let manuallyPaused = false;
-  let explicitPlayback = false;
-  let inView = true;
-  let loading = null;
-  let mediaURL = null;
 
   // Observe each section, since the drifting layers extend beyond its edges.
   const fogSections = new Map();
@@ -206,8 +239,8 @@
 
   function updateMotionLabel() {
     syncFogMotion();
-    motionButton.hidden = !ready && (!fogSections.size || reducedMotion.matches || Boolean(navigator.connection?.saveData));
-    const playing = !video.paused || Boolean(document.querySelector('.fog-layer.is-drifting'));
+    motionButton.hidden = !fogSections.size || reducedMotion.matches || Boolean(navigator.connection?.saveData);
+    const playing = Boolean(document.querySelector('.fog-layer.is-drifting'));
     const key = playing ? 'motionPause' : 'motionPlay';
     motionButton.setAttribute('aria-pressed', String(playing));
     motionButton.dataset.i18nAria = key;
@@ -217,71 +250,13 @@
     label.textContent = translate(key);
     motionButton.querySelector('.motion-icon').textContent = playing ? 'Ⅱ' : '▶';
   }
-  async function loadVideo() {
-    if (ready) return true;
-    if (loading) return loading;
-    loading = (async () => {
-      try {
-        const response = await fetch(video.dataset.src);
-        if (!response.ok) return false;
-        const blob = await response.blob();
-        mediaURL = URL.createObjectURL(blob);
-        video.src = mediaURL;
-        await new Promise((resolve, reject) => {
-          video.addEventListener('loadeddata', resolve, { once: true });
-          video.addEventListener('error', reject, { once: true });
-          video.load();
-        });
-        ready = true;
-        motionButton.hidden = false;
-        return true;
-      } catch {
-        return false;
-      }
-    })();
-    return loading;
-  }
-  async function playVideo(explicit = false) {
-    if (explicit) explicitPlayback = true;
-    const canPlay = () => !manuallyPaused && !document.hidden && inView && !hasOpenDialog() && (explicitPlayback || (!reducedMotion.matches && !navigator.connection?.saveData));
-    if (!canPlay()) return;
-    if (await loadVideo()) {
-      if (!canPlay()) return;
-      try { await video.play(); video.classList.add('is-ready'); } catch { updateMotionLabel(); }
-    }
-  }
-  motionButton.addEventListener('click', async () => {
-    const backgroundActive = !video.paused || Boolean(document.querySelector('.fog-layer.is-drifting'));
-    if (backgroundActive) { manuallyPaused = true; explicitPlayback = false; video.pause(); }
-    else { manuallyPaused = false; updateMotionLabel(); await playVideo(true); }
+  motionButton.addEventListener('click', () => {
+    manuallyPaused = Boolean(document.querySelector('.fog-layer.is-drifting'));
     updateMotionLabel();
   });
-  video.addEventListener('play', () => {
-    if (hasOpenDialog() || document.hidden || !inView || manuallyPaused) video.pause();
-    updateMotionLabel();
-  });
-  video.addEventListener('pause', updateMotionLabel);
-  new IntersectionObserver(entries => {
-    inView = entries[0].isIntersecting;
-    if (!inView) video.pause();
-    else if (ready) playVideo();
-  }, { threshold: 0.15 }).observe(video);
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) video.pause();
-    else if (ready) playVideo();
-    updateMotionLabel();
-  });
-  reducedMotion.addEventListener('change', () => {
-    explicitPlayback = false;
-    if (reducedMotion.matches) { video.pause(); video.classList.remove('is-ready'); }
-    else playVideo();
-    updateMotionLabel();
-  });
-  if (!reducedMotion.matches && !navigator.connection?.saveData) {
-    if (fogSections.size) { motionButton.hidden = false; updateMotionLabel(); }
-    if ('requestIdleCallback' in window) requestIdleCallback(() => playVideo(), { timeout: 1800 });
-    else setTimeout(() => playVideo(), 700);
-  }
+  document.addEventListener('visibilitychange', updateMotionLabel);
+  reducedMotion.addEventListener('change', updateMotionLabel);
+  updateMotionLabel();
 
   // Load the official trailer only after an explicit click.
   const dialog = document.querySelector('.trailer-dialog');

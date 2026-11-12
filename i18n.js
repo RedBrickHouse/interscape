@@ -15,10 +15,10 @@
       "navDreams": "꿈속의 세계",
       "navTrailer": "트레일러",
       "language": "언어",
-      "heroAlt": "도시 위에 떠오른 거대한 검은 구체",
+      "heroAlt": "붉은 꽃이 핀 꿈속, 거대한 구체 주위에 떠 있는 우주복 인물들",
       "motionPlay": "배경 움직임 재생",
       "motionPause": "배경 움직임 멈추기",
-      "heroTitle": "잠든 사람들의<br>꿈으로 들어가세요.",
+      "heroTitle": "잠든 사람들의 꿈으로 들어가세요.",
       "heroDescription": "타인의 꿈에 들어갈 수 있는 요원 케이. 꿈과 현실의 경계를 넘나들며, 깨어나지 못하는 사람들을 구할 단서를 찾으세요.",
       "singlePlayer": "싱글플레이",
       "wishlist": "Steam에서 찜하기",
@@ -128,7 +128,12 @@
       "news2Title": "TGS 2026 참가와 새 챕터 공개",
       "news2Body": "새 챕터가 추가된 TGS 시연 버전과 한국관·SELECTED INDIE 80 두 부스의 전시 계획을 소개했습니다.",
       "news3Title": "SELECTED INDIE 80 Excellence Awards Gold 수상",
-      "news3Body": "INTERSCAPE가 창의성과 완성도를 평가하는 TGS 2026 SELECTED INDIE 80 Excellence Awards에서 Gold 수상작으로 선정됐습니다."
+      "news3Body": "INTERSCAPE가 창의성과 완성도를 평가하는 TGS 2026 SELECTED INDIE 80 Excellence Awards에서 Gold 수상작으로 선정됐습니다.",
+      "storyWorldAlt": "도시 위로 떠오른 사람들 사이에 선 케이",
+      "chooseAbility": "꿈속의 능력",
+      "abilityTab1": "꿈 전환",
+      "abilityTab2": "시간 조작",
+      "abilityTab3": "모습 변환"
     },
     "en": {
       "docTitle": "INTERSCAPE | A Story Action Adventure",
@@ -142,10 +147,10 @@
       "navDreams": "Dream worlds",
       "navTrailer": "Trailer",
       "language": "Language",
-      "heroAlt": "A massive black sphere floating above a city",
+      "heroAlt": "Figures in spacesuits drift around a giant sphere above red flowers",
       "motionPlay": "Play background motion",
       "motionPause": "Pause background motion",
-      "heroTitle": "Enter the dreams<br>of those who cannot wake.",
+      "heroTitle": "Enter the dreams of those who cannot wake.",
       "heroDescription": "Agent K can enter other people’s dreams. Explore dream and reality to find clues that could save those who cannot wake.",
       "singlePlayer": "Single-player",
       "wishlist": "Wishlist on Steam",
@@ -255,7 +260,12 @@
       "news2Title": "A new chapter for TGS 2026",
       "news2Body": "The team announced a new chapter in the TGS demo build and exhibition plans for the Korea Pavilion and SELECTED INDIE 80 booths.",
       "news3Title": "Gold at the SELECTED INDIE 80 Excellence Awards",
-      "news3Body": "INTERSCAPE received Gold at the TGS 2026 SELECTED INDIE 80 Excellence Awards, which recognize creativity and polish."
+      "news3Body": "INTERSCAPE received Gold at the TGS 2026 SELECTED INDIE 80 Excellence Awards, which recognize creativity and polish.",
+      "storyWorldAlt": "K stands among people floating over a city street",
+      "chooseAbility": "Dream abilities",
+      "abilityTab1": "Dream shift",
+      "abilityTab2": "Time control",
+      "abilityTab3": "Transformation"
     },
     "zh": {
       "docTitle": "INTERSCAPE | 剧情动作冒险游戏",
@@ -269,10 +279,10 @@
       "navDreams": "梦中世界",
       "navTrailer": "预告片",
       "language": "语言",
-      "heroAlt": "城市上空漂浮着巨大的黑色球体",
+      "heroAlt": "红花盛开的梦境中，身穿宇航服的人漂浮在巨大球体周围",
       "motionPlay": "播放背景动画",
       "motionPause": "暂停背景动画",
-      "heroTitle": "走进<br>沉睡者的梦境。",
+      "heroTitle": "走进沉睡者的梦境。",
       "heroDescription": "特工 K 能够进入他人的梦境。穿梭于梦与现实之间，寻找拯救沉睡者的线索。",
       "singlePlayer": "单人游戏",
       "wishlist": "加入 Steam 愿望单",
@@ -382,7 +392,12 @@
       "news2Title": "参展 TGS 2026，展示全新章节",
       "news2Body": "团队公布了加入新章节的 TGS 试玩版本，以及在韩国馆与 SELECTED INDIE 80 展位的参展计划。",
       "news3Title": "荣获 SELECTED INDIE 80 Excellence Awards 金奖",
-      "news3Body": "INTERSCAPE 荣获 TGS 2026 SELECTED INDIE 80 Excellence Awards 金奖，该奖项表彰游戏的创意与完成度。"
+      "news3Body": "INTERSCAPE 荣获 TGS 2026 SELECTED INDIE 80 Excellence Awards 金奖，该奖项表彰游戏的创意与完成度。",
+      "storyWorldAlt": "凯站在城市街道上，周围的人漂浮在空中",
+      "chooseAbility": "梦境能力",
+      "abilityTab1": "梦境切换",
+      "abilityTab2": "时间操控",
+      "abilityTab3": "形态变化"
     }
   };
 
