@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f1e9df">
+  <title>INTER•SCAPE — Dream Atlas</title>
+  <meta name="description" content="요원 케이와 함께 꿈의 지도첩을 펼쳐 보세요. ROOMTONE Games의 스토리 액션 어드벤처 INTER•SCAPE.">
+  <meta property="og:title" content="INTER•SCAPE — Dream Atlas">
+  <meta property="og:description" content="요원 케이와 함께 꿈의 지도첩을 펼쳐 보세요.">
+  <meta property="og:image" content="https://redbrickhouse.gg/interscape/atlas/art/flowers.webp">
+  <meta property="og:url" content="https://redbrickhouse.gg/interscape/atlas/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23483848'/%3E%3Ccircle cx='38' cy='24' r='12' fill='%23f1e9df'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="art/flowers.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;600&family=Noto+Serif+SC:wght@500&display=swap">
+  <link rel="stylesheet" href="atlas.css">
+  <link rel="stylesheet" href="chapters.css">
+  <script src="chapters-copy.js" defer></script>
+  <script src="atlas.js" defer></script>
+  <script src="chapters.js" defer></script>
+</head>
+<body>
+<a class="a-skip" href="#dream-atlas" data-copy="skip">본문으로</a>
+<header class="atlas-header">
+  <div class="atlas-wrap atlas-bar">
+    <a href="#dream-atlas" class="atlas-brand"><img src="../img/logo.png" alt="INTER•SCAPE" width="1642" height="252"></a>
+    <nav class="atlas-nav" aria-label="목차" data-copy-aria="nav">
+      <a href="#story" data-copy="navStory">이야기</a><a href="#play" data-copy="navPlay">플레이</a><a href="#journal" data-copy="navJournal">개발 소식</a><a href="#information" data-copy="navInfo">게임 정보</a>
+    </nav>
+    <div class="atlas-languages" role="group" aria-label="언어" data-copy-aria="language"><button type="button" data-lang="ko" aria-pressed="true" aria-label="한국어">KR</button><button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button><button type="button" data-lang="zh" aria-pressed="false" aria-label="简体中文">中</button></div>
+  </div>
+</header>
+<main>
+<section id="dream-atlas" class="frontispiece" data-world="flowers" aria-labelledby="atlas-title">
+  <div class="atlas-wash" aria-hidden="true"></div>
+  <div class="atlas-wrap chart-room">
+    <div class="cover-copy">
+      <p class="cover-credit">ROOMTONE GAMES <i aria-hidden="true"></i> <span data-copy="genre">스토리 액션 어드벤처</span></p>
+      <h1 id="atlas-title"><span class="a-sr">INTER•SCAPE — </span><span>Dream</span> <em>Atlas</em></h1>
+      <p class="atlas-lead" data-copy="lead">잠든 이들을 깨우기 위해, 요원 케이는 타인의 꿈으로 들어갑니다.</p>
+      <div class="cover-actions">
+        <a class="ink-button" href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener"><span data-copy="wish">Steam에서 찜하기</span><span aria-hidden="true">↗</span></a>
+        <button type="button" class="film-link" data-trailer><span class="play-mark" aria-hidden="true"></span><span data-copy="film">공식 트레일러</span></button>
+      </div>
+      <p class="cover-platforms">PC <i>·</i> PlayStation 5 <i>·</i> <span data-copy="coming">출시 예정</span></p>
+    </div>
+    <figure class="orrery" aria-labelledby="plate-name">
+      <div class="sphere-mist" aria-hidden="true"></div>
+      <div class="planet-art">
+        <img id="world-art" src="art/flowers.webp" alt="붉은 꽃밭과 돌기둥 사이로 빛의 고리가 떠 있다." width="1440" height="810" fetchpriority="high">
+      </div>
+      <canvas id="star-chart" aria-hidden="true"></canvas>
+      <span class="satellite" aria-hidden="true"></span>
+      <button class="open-plate" data-copy-aria="expandWorld" aria-label="꿈 풍경 크게 보기" type="button"></button>
+      <figcaption><span id="plate-figure" aria-hidden="true">Fig. I</span><i></i><span id="plate-name" data-copy="flowers">붉은 꽃밭</span><span class="enlarge-symbol" aria-hidden="true">↗</span></figcaption>
+    </figure>
+  </div>
+  <div class="atlas-wrap plate-index">
+    <div class="index-heading"><span class="index-emblem" aria-hidden="true">✳</span><h2 data-copy="worlds">꿈의 색인</h2></div>
+    <div class="plate-choices" role="group" aria-label="꿈 풍경 선택" data-copy-aria="choose">
+      <button data-world-choice="flowers" aria-pressed="true" type="button"><img src="art/flowers.webp" alt=""><span data-copy="flowers">붉은 꽃밭</span></button>
+      <button data-world-choice="noir" aria-pressed="false" type="button"><img src="art/noir.webp" alt=""><span data-copy="noir">흑백 골목</span></button>
+      <button data-world-choice="neon" aria-pressed="false" type="button"><img src="art/neon.webp" alt=""><span data-copy="neon">네온 도시</span></button>
+    </div>
+    <button class="still-toggle" type="button" aria-pressed="false" data-copy-aria="motion" aria-label="배경 움직임 멈추기" hidden><span aria-hidden="true"></span></button>
+  </div>
+</section>
+<section id="story" class="folio-story" aria-labelledby="folio-story-title">
+  <div class="atlas-wrap">
+    <div class="folio-story-spread">
+      <div class="folio-story-text">
+        <p class="folio-rubric" lang="en">The story</p>
+        <h2 id="folio-story-title" class="folio-title"><span data-copy="storyLeadA">꿈을 고를 수 있던</span> <span data-copy="storyLeadB">사람들.</span></h2>
+        <p data-copy="oracleFirst">블루닷의 드림머신 ‘오라클’ 덕분에 사람들은 원하는 꿈을 꿀 수 있었다. 검은 구체가 하늘에 나타나기 전까지는.</p>
+        <p data-copy="oracleSecond">이제 누구도 잠에서 깨지 못한다. 다른 사람의 꿈에 들어갈 수 있는 다이브 요원 케이는 그들을 깨울 방법을 찾아 나선다.</p>
+      </div>
+      <figure class="folio-city">
+        <img loading="lazy" decoding="async" width="1920" height="1080" src="../img/city.webp" alt="">
+        <figcaption><span lang="en">Oracle</span><span class="folio-figure-rule" aria-hidden="true"></span><span data-copy="oracleCaption">멈춰 선 도시</span></figcaption>
+      </figure>
+    </div>
+    <div class="folio-dossier">
+      <figure class="folio-agent">
+        <img loading="lazy" decoding="async" width="1920" height="1080" src="../img/v3-agent-k.webp" alt="">
+        <figcaption data-copy="agentCaption">다이브 요원, 케이</figcaption>
+      </figure>
+      <div class="folio-powers">
+        <h3 data-copy="powersTitle">꿈마다 다른 몸의 감각</h3>
+        <dl>
+          <div><dt data-copy="shiftName">꿈 전환</dt><dd data-copy="shiftBody">손가락을 튕기면 눈앞의 공간이 바뀐다. 두 꿈을 오가며 이어지는 길을 찾는다.</dd></div>
+          <div><dt data-copy="timeName">시간 조작</dt><dd data-copy="timeBody">어떤 꿈에서는 시간의 흐름을 다룰 수 있다. 타이밍을 바꾸어 퍼즐을 풀어 나간다.</dd></div>
+          <div><dt data-copy="shapeName">변신</dt><dd data-copy="shapeBody">사람이 아닌 존재의 모습으로 꿈을 탐험할 때도 있다. 낯선 몸이 또 다른 단서를 드러낸다.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="play" class="folio-cinema" aria-labelledby="folio-play-title">
+  <div class="atlas-wrap folio-booth">
+    <div class="folio-projection">
+      <div class="folio-cinema-heading">
+        <p lang="en" class="folio-rubric">Screening room</p>
+        <h2 id="folio-play-title" class="folio-title" data-copy="cinemaHead">꿈의 상영실</h2>
+      </div>
+      <div class="folio-reel">
+        <video id="folio-film" controls muted playsinline preload="none" poster="../img/dream-switch-poster.webp" width="1280" height="720" aria-labelledby="folio-film-name-0">
+          <source src="../media/dream-switch.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="folio-film-menu">
+      <h3 data-copy="cinemaChoose">게임플레이 필름</h3>
+      <div class="folio-film-options">
+        <button class="folio-film-option" type="button" data-film="0" aria-pressed="true" aria-controls="folio-film">
+          <img loading="lazy" decoding="async" src="../img/dream-switch-poster.webp" alt="" width="192" height="108">
+          <span id="folio-film-name-0" data-copy="filmShift">두 꿈 사이</span>
+        </button>
+        <button class="folio-film-option" type="button" data-film="1" aria-pressed="false" aria-controls="folio-film">
+          <img loading="lazy" decoding="async" src="../img/v3-action-poster.webp" alt="" width="192" height="108">
+          <span id="folio-film-name-1" data-copy="filmAction">꿈속의 액션</span>
+        </button>
+      </div>
+      <p class="folio-film-note" data-film-caption="0" data-copy="filmShiftDesc">케이의 손짓에 익숙한 복도가 전혀 다른 공간으로 바뀌는 순간.</p>
+      <p class="folio-film-note" data-film-caption="1" data-copy="filmActionDesc" hidden>빠르게 뒤틀리는 공간을 가로지르는 케이의 액션 장면.</p>
+      <button type="button" class="folio-trailer-link" data-trailer><span class="folio-projector-icon" aria-hidden="true">▷</span><span data-copy="cinemaTrailer">공식 트레일러 보기</span></button>
+    </div>
+  </div>
+</section>
+<section id="journal" class="folio-journal" aria-labelledby="folio-journal-title">
+  <div class="atlas-wrap">
+    <div class="folio-journal-heading">
+      <div><p class="folio-rubric" lang="en">From the studio</p><h2 id="folio-journal-title" class="folio-title" data-copy="journalHead">개발 일지</h2></div>
+      <a class="folio-external" href="https://store.steampowered.com/news/app/3093160/" target="_blank" rel="noopener"><span data-copy="allNews">Steam 소식 전체 보기</span><span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="folio-dispatch">
+      <article class="folio-feature-post">
+        <a href="https://steamcommunity.com/games/3093160/announcements/detail/690899935132910203" target="_blank" rel="noopener">
+          <img src="gstar-2026.webp" width="800" height="450" loading="lazy" decoding="async" alt="">
+          <div><time datetime="2026-11-13">2026.11.13</time>
+          <h3><span data-copy="post1Head">지스타 2026에서 만나는 케이</span> <span class="folio-outbound" aria-hidden="true">↗</span></h3>
+          <p data-copy="post1Body">11월 19일부터 22일까지 부산 벡스코에서 열리는 시연 안내. 콘솔게임 공동관(1관 B01)과 레드브릭하우스 부스(2관 E01)에서 플레이할 수 있다.</p></div>
+        </a>
+      </article>
+      <div class="folio-other-posts">
+        <article><a href="https://store.steampowered.com/news/app/3093160/view/678511862081388592" target="_blank" rel="noopener">
+          <time datetime="2026-10-07">2026.10.07</time>
+          <h3><span data-copy="post2Head">도쿄에서 돌아와 다음 챕터로</span> <span class="folio-outbound" aria-hidden="true">↗</span></h3>
+          <p data-copy="post2Body">도쿄게임쇼 현장 사진과 함께, 두 부스에서 플레이어를 만난 개발팀의 후기를 전한다.</p>
+        </a></article>
+        <article><a href="https://store.steampowered.com/news/app/3093160/view/705530923042471953" target="_blank" rel="noopener">
+          <time datetime="2026-09-09">2026.09.09</time>
+          <h3><span data-copy="post3Head">도쿄게임쇼 시연 빌드 공개</span> <span class="folio-outbound" aria-hidden="true">↗</span></h3>
+          <p data-copy="post3Body">한국관과 SELECTED INDIE 80 부스에서 선보일 새로운 챕터를 소개한다.</p>
+        </a></article>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="information" class="folio-colophon" aria-labelledby="folio-info-title">
+  <div class="atlas-wrap folio-colophon-layout">
+    <div class="folio-imprint"><p class="folio-rubric" lang="en">Colophon</p><h2 id="folio-info-title" class="folio-title" data-copy="infoHead">작품 정보</h2>
+      <p data-copy="infoBlurb">룸톤게임즈가 만드는 싱글플레이 스토리 액션 어드벤처.</p>
+      <div class="folio-stores"><a href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener">Steam <span aria-hidden="true">↗</span></a><a href="https://store.playstation.com/en-us/concept/10015911" target="_blank" rel="noopener">PlayStation <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="folio-faq">
+      <details open><summary data-copy="releaseQ">언제, 어디서 플레이할 수 있나요?</summary><p data-copy="releaseA">Windows PC와 PlayStation 5로 출시 예정입니다. 정확한 출시일은 아직 공개되지 않았습니다.</p></details>
+      <details><summary data-copy="languageQ">어떤 언어를 지원하나요?</summary><p data-copy="languageA">Steam 버전은 한국어를 포함한 30개 언어의 인터페이스와 자막을 지원하며, 음성은 영어입니다.</p></details>
+      <details><summary data-copy="requirementsQ">PC 시스템 요구 사양은 어떻게 되나요?</summary><p data-copy="requirementsA">Steam 상점 아래쪽의 ‘시스템 요구 사항’에서 최소 및 권장 사양을 확인할 수 있습니다.</p><a class="folio-external" href="https://store.steampowered.com/app/3093160/INTERSCAPE/#sysreq_anchor" target="_blank" rel="noopener"><span data-copy="requirementsLink">Steam에서 PC 사양 확인</span><span aria-hidden="true">↗</span></a></details>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="folio-footer">
+  <div class="atlas-wrap folio-footer-inner">
+    <div class="folio-partners"><a href="https://redbrickhouse.gg/" target="_blank" rel="noopener"><img src="../img/rbh-logo.svg" width="228" height="66" loading="lazy" alt="RED BRICK HOUSE"></a><a href="https://www.roomtonegames.com/" target="_blank" rel="noopener"><img src="../img/roomtone-logo.png" width="527" height="185" loading="lazy" alt="ROOMTONE Games"></a></div>
+    <p>© 2026 ROOMTONE Games.<br>Published by RED BRICK HOUSE. All rights reserved.</p>
+    <a class="folio-top" href="#dream-atlas"><span data-copy="topLink">처음으로</span><span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
+<dialog class="picture-viewer" aria-labelledby="view-name">
+  <header><span id="view-name">붉은 꽃밭</span><button type="button" data-close-view data-copy-aria="close" aria-label="닫기">×</button></header>
+  <img class="unfolded-image" width="1440" height="810" alt="">
+  <div class="view-controls">
+    <button type="button" data-step="-1" data-copy-aria="previous" aria-label="이전 풍경">←</button>
+    <span class="view-count"></span>
+    <button type="button" data-step="1" data-copy-aria="next" aria-label="다음 풍경">→</button>
+  </div>
+</dialog>
+<dialog class="atlas-dialog" aria-labelledby="film-title">
+  <header><h2 id="film-title" data-copy="film">공식 트레일러</h2><button type="button" data-close-film aria-label="닫기" data-copy-aria="close">×</button></header>
+  <div class="film-screen"></div>
+  <a href="https://www.youtube.com/watch?v=OuanYzbB6oQ" target="_blank" rel="noopener" data-copy="youtube">YouTube에서 보기 ↗</a>
+</dialog>
+</body>
+</html>
