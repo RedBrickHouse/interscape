@@ -5,7 +5,6 @@
 *.log
 # Earlier asset variants retained locally
 /img/action-play-poster.webp
-/img/action-play-ui-poster.webp
 /img/dream-shift-poster.webp
 /img/hero-poster.webp
 /img/keyart.webp
@@ -16,7 +15,6 @@
 /img/sphere.webp
 /img/v3-ability-action.webp
 /img/v3-world-neon.webp
-/media/action-play.mp4
 /media/dream-shift.mp4
 /media/dream-switch.webm
 /media/hero.webm
