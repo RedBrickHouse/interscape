@@ -3,7 +3,7 @@
   const dialog = document.getElementById('still-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const controls = {
-    ko:{ close:'닫기', prev:'이전 장면', next:'다음 장면', original:'원본 파일', retry:'다시 시도', failed:'스크린샷을 불러오지 못했습니다.' },
+    ko:{ close:'닫기', prev:'이전 장면', next:'다음 장면', original:'원본 이미지 열기', retry:'다시 시도', failed:'스크린샷을 불러오지 못했습니다.' },
     en:{ close:'Close', prev:'Previous scene', next:'Next scene', original:'Original file', retry:'Try again', failed:'The screenshot could not load.' },
     zh:{ close:'关闭', prev:'上一张', next:'下一张', original:'原图', retry:'重试', failed:'截图加载失败。' }
   };

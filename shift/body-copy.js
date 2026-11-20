@@ -2,7 +2,7 @@ window.storyCopy = {
   "en": {
     "cutStreet": "People float above an empty city street.",
     "cutSphere": "A black sphere hangs over the city.",
-    "cutOracleTitle": "Oracle",
+    "cutOracleTitle": "The dream machine",
     "cutOracle": "BlueDot built a machine that let people choose what to dream. Inside Oracle, each dreamer’s subconscious shaped a world of its own. The day a black sphere appeared in the sky, the dreamers found themselves trapped in those worlds.",
     "cutSnap": "Vanishing chandelier",
     "cutSnapClip": "K snaps his fingers. The chandelier vanishes, revealing a circular pattern on the far wall.",
@@ -40,7 +40,7 @@ window.storyCopy = {
   "zh": {
     "cutStreet": "空荡荡的街道上方悬浮着人影。",
     "cutSphere": "巨大的黑色球体悬在城市上空。",
-    "cutOracleTitle": "Oracle",
+    "cutOracleTitle": "梦境机器",
     "cutOracle": "BlueDot 造了一台让人选择梦境的机器，取名 Oracle。每个梦里的世界都源自做梦者的潜意识。黑色球体出现在天空的那天，人们被困在了各自的梦中。",
     "cutSnap": "消失的吊灯",
     "cutSnapClip": "K 打了个响指。天花板上的吊灯消失了，对面的墙上显出圆形图案。",

@@ -2,27 +2,27 @@
   'use strict';
   const labels = {
     ko: {
-      title:'INTER•SCAPE | 인터스케이프', meta:'검은 구체가 나타난 뒤, 사람들이 꿈에서 깨어나지 못한다. 다이브 요원 케이는 잠든 이들을 찾아 꿈속으로 들어간다. 룸톤게임즈의 액션 어드벤처 INTER•SCAPE.',
-      enter:'꿈에 들어가기', leave:'꿈에서 나오기', portalDesc:'검은 구체 안의 장면을 화면 가득 엽니다.', choose:'꿈 장면 선택',
-      halo:'빛의 고리', goggles:'꿈의 주인을 찾아라', screens:'모니터실', fullPhoto:'전체 스크린샷', failure:'장면을 불러오지 못했습니다. 다시 선택해 주세요.',
-      coverAlt:'붉은 꽃밭에 선 우주복 차림의 인물 위로 거대한 구체가 떠 있다.', haloAlt:'사람이 밝은 고리 앞에 떠 있고, 보랏빛 궤적이 몸을 두른다.', gogglesAlt:'흑백 화면 속 모자와 코트를 쓴 곰. 왼쪽 위에는 꿈의 주인을 찾으라는 목표가 적혀 있다.', screensAlt:'초록색 화면 세 대가 천장에 매달려 있다. 그 아래로 두 사람이 보인다.',
-      leadOne:'오라클에 접속한 사람들이', leadTwo:'깨어나지 않는다.', menu:'메뉴', trailerTitle:'공식 트레일러', motionPlay:'영상 재생', motionReplay:'다시 재생', motionPause:'일시정지', motionError:'영상을 불러오지 못했습니다. 다시 재생해 주세요.', release:'출시 예정', nav:'주 메뉴', storyNav:'이야기', playNav:'게임플레이', journalNav:'개발 소식', infoNav:'게임 정보',
-      language:'언어', skip:'본문으로', trailer:'트레일러 보기', wish:'Steam에서 찜하기', close:'닫기', youtube:'YouTube에서 보기 ↗'
+      title:'INTER•SCAPE | 인터스케이프', meta:'검은 구체가 나타난 뒤, 사람들은 꿈에서 깨어나지 못했다. 다른 사람의 꿈에 들어갈 수 있는 요원 케이가 이들을 구하러 나선다. 룸톤게임즈의 액션 어드벤처 INTER•SCAPE.',
+      enter:'꿈속으로 들어가기', leave:'꿈에서 나오기', portalDesc:'구체 안에 보이는 장면을 크게 봅니다.', choose:'꿈 장면 선택',
+      halo:'빛의 고리', goggles:'꿈의 주인을 찾아라', screens:'모니터실', fullPhoto:'스크린샷 크게 보기', failure:'장면을 불러오지 못했습니다. 다시 선택해 주세요.',
+      coverAlt:'붉은 꽃밭에 우주복을 입은 사람이 서 있고, 그 위로 거대한 구체가 떠 있다.', haloAlt:'빛나는 고리 앞에 사람이 떠 있다. 주변으로 보랏빛 선들이 휘어져 있다.', gogglesAlt:'흑백 화면 속 곰이 모자를 쓰고 코트를 입고 있다. 왼쪽 위에는 꿈의 주인을 찾으라는 목표가 보인다.', screensAlt:'천장에 매달린 모니터 세 대가 초록빛을 낸다. 그 아래 두 사람이 서 있다.',
+      leadOne:'검은 구체가 나타난 뒤,', leadTwo:'사람들은 꿈에서 깨어나지 못했다.', menu:'메뉴', trailerTitle:'공식 트레일러', motionPlay:'영상 재생', motionReplay:'다시 재생', motionPause:'일시 정지', motionError:'영상을 불러오지 못했습니다. 다시 시도해 주세요.', release:'출시 예정', nav:'주 메뉴', storyNav:'이야기', playNav:'게임플레이', journalNav:'개발 소식', infoNav:'게임 정보',
+      language:'언어', skip:'본문으로', trailer:'트레일러 보기', wish:'스팀에서 찜하기', close:'닫기', youtube:'YouTube에서 보기 ↗'
     },
     en: {
-      title:'INTER•SCAPE', meta:'Users of the Oracle dream machine have stopped waking up. Play as Agent K in INTER•SCAPE, an action adventure from ROOMTONE Games.',
+      title:'INTER•SCAPE', meta:'A black sphere hangs in the sky, and people are trapped in their dreams. Play as Agent K in INTER•SCAPE, an action adventure from ROOMTONE Games.',
       enter:'Enter the dream', leave:'Leave dream', portalDesc:'Open the scene inside the black sphere.', choose:'Choose a dream scene',
       halo:'Halo', goggles:'Find the Dream Host', screens:'Monitor room', fullPhoto:'Full screenshot', failure:'This scene could not load. Select it again to retry.',
       coverAlt:'An astronaut stands in a field of red flowers beneath an enormous sphere.', haloAlt:'A figure floats in front of a bright ring, surrounded by trails of violet light.', gogglesAlt:'A bear in a hat and coat, in black and white. The objective at the top reads “Find the Dream Host”.', screensAlt:'Three green monitors hang from the ceiling above two people.',
-      leadOne:'The people connected to Oracle', leadTwo:'won’t wake up.', menu:'Menu', trailerTitle:'Official trailer', motionPlay:'Play clip', motionReplay:'Replay clip', motionPause:'Pause clip', motionError:'The clip could not load. Try playing it again.', release:'Coming soon', nav:'Main navigation', storyNav:'Story', playNav:'Gameplay', journalNav:'News', infoNav:'Game info',
+      leadOne:'A black sphere appeared.', leadTwo:'Now the dreamers can’t wake up.', menu:'Menu', trailerTitle:'Official trailer', motionPlay:'Play clip', motionReplay:'Replay clip', motionPause:'Pause clip', motionError:'The clip could not load. Try playing it again.', release:'Coming soon', nav:'Main navigation', storyNav:'Story', playNav:'Gameplay', journalNav:'News', infoNav:'Game info',
       language:'Language', skip:'Skip to content', trailer:'Watch trailer', wish:'Wishlist on Steam', close:'Close', youtube:'Watch on YouTube ↗'
     },
     zh: {
-      title:'INTER•SCAPE', meta:'接入梦境机器 Oracle 的人们再也没有醒来。在 ROOMTONE Games 的动作冒险游戏 INTER•SCAPE 中，扮演特工 K，进入他人的梦境。',
+      title:'INTER•SCAPE', meta:'黑色球体出现后，人们被困在梦中。在 ROOMTONE Games 的动作冒险游戏 INTER•SCAPE 中，扮演特工 K，进入他人的梦境。',
       enter:'进入梦境', leave:'离开梦境', portalDesc:'展开黑色球体中的画面。', choose:'选择梦境画面',
       halo:'光环', goggles:'寻找梦境的主人', screens:'三块屏幕', fullPhoto:'查看完整截图', failure:'画面加载失败，请重新选择。',
       coverAlt:'身穿宇航服的人站在红色花田里，头顶悬着一个巨大的球体。', haloAlt:'一个人悬浮在明亮的光环前，周围环绕着紫色光迹。', gogglesAlt:'黑白画面中，一只熊穿着大衣，头戴礼帽。左上角的任务提示要求寻找梦境的主人。', screensAlt:'三台泛着绿光的显示器悬在天花板上，下方站着两个人。',
-      leadOne:'接入 Oracle 的人们', leadTwo:'再也没有醒来。', menu:'菜单', trailerTitle:'官方预告片', motionPlay:'播放片段', motionReplay:'重播片段', motionPause:'暂停', motionError:'片段加载失败，请重试。', release:'即将推出', nav:'主导航', storyNav:'故事', playNav:'玩法', journalNav:'动态', infoNav:'游戏信息',
+      leadOne:'黑色球体出现后，', leadTwo:'人们再也没有醒来。', menu:'菜单', trailerTitle:'官方预告片', motionPlay:'播放片段', motionReplay:'重播片段', motionPause:'暂停', motionError:'片段加载失败，请重试。', release:'即将推出', nav:'主导航', storyNav:'故事', playNav:'玩法', journalNav:'动态', infoNav:'游戏信息',
       language:'语言', skip:'跳至正文', trailer:'观看预告片', wish:'加入 Steam 愿望单', close:'关闭', youtube:'在 YouTube 上观看 ↗'
     }
   };

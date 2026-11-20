@@ -145,13 +145,16 @@ body[data-dream="other"] .cut-street figcaption .cut-other { display: inline; }
 .cut-endlinks { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 4px clamp(15px,1.8vw,30px); margin-top: 13px; }
 .cut-endlinks a { color: white; min-height: 44px; font-size: .96rem; }
 .cut-footer { background: #171619; }
-.cut-footerinner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 13px 24px; padding-block: clamp(23px,2.7vw,45px); }
-.cut-studios, .cut-social { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 21px; }
+.cut-footerinner { display: grid; justify-items: center; gap: 12px; padding-block: clamp(28px,3.6vw,56px); text-align: center; }
+.cut-studios, .cut-social { display: flex; justify-content: center; align-items: center; }
+.cut-studios { gap: 24px; }
+.cut-studios .studio-divider { width: 1px; height: 32px; background: #635b62; }
+.cut-social { flex-wrap: wrap; gap: 3px 21px; }
 .cut-studios a, .cut-social a { display: inline-flex; align-items: center; min-height: 44px; }
-.cut-studios img { display: block; height: 33px; width: auto; }
-.cut-studios a:first-child img { height: 25px; }
+.cut-studios img { display: block; height: 50px; width: auto; }
+.cut-studios a:first-child img { height: 38px; }
 .cut-social a { color: #e6dfda; font-size: .91rem; }
-.cut-footer small { grid-column: 1 / -1; border-top: 1px solid #3e383f; padding-top: 13px; font-size: .78rem; line-height: 1.6; color: #bab2b4; }
+.cut-footer small { width: 100%; border-top: 1px solid #3e383f; padding-top: 13px; font-size: .78rem; line-height: 1.6; text-wrap: balance; color: #bab2b4; }
 
 @media(max-width: 900px) {
   .cut-play > .cut-wrap { grid-template-columns: minmax(180px,.72fr) minmax(0,1.4fr); gap: 28px; }
@@ -204,8 +207,14 @@ body[data-dream="other"] .cut-street figcaption .cut-other { display: inline; }
   .cut-endtitle { width: clamp(191px,55vw,295px); }
   .cut-endlinks { margin-top: 4px; }
   .cut-endlinks a { font-size: .84rem; }
-  .cut-footerinner { grid-template-columns: 1fr; gap: 6px; padding-block: 18px 22px; }
+  .cut-footerinner { gap: 8px; padding-block: 24px; }
   .cut-footer small { margin-top: 4px; }
+}
+@media(max-width: 600px) {
+  .cut-studios { flex-direction: column; gap: 8px; }
+  .cut-studios .studio-divider { width: 64px; height: 1px; }
+  .cut-studios img { height: 40px; }
+  .cut-studios a:first-child img { height: 30px; }
 }
 @media(max-width: 380px) {
   .cut-k { grid-template-columns: minmax(78px,.56fr) minmax(0,1.44fr); gap: 13px; }

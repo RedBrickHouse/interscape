@@ -1,7 +1,7 @@
-@font-face { font-family:"Site Book KR"; src:url("type/book-ko.woff2") format("woff2"); font-weight:400; font-display:swap; }
+@font-face { font-family:"Site Book KR"; src:url("type/book-ko.woff2?v=ko-2") format("woff2"); font-weight:400; font-display:swap; }
 @font-face { font-family:"Site Book SC"; src:url("type/book-zh.woff2") format("woff2"); font-weight:500; font-display:swap; }
 @font-face { font-family:"Site Spectral"; src:url("type/book-latin.woff2") format("woff2"); font-weight:400; font-display:swap; }
-@font-face { font-family:"Site Sans"; src:url("type/sans-ko.woff2") format("woff2"); font-weight:400 650; font-display:swap; }
+@font-face { font-family:"Site Sans"; src:url("type/sans-ko.woff2?v=ko-2") format("woff2"); font-weight:400 650; font-display:swap; }
 :root {
   color-scheme:dark; --night:#19181d; --ivory:#f6f1ec; --petal:#e3bdc7;
   --sans:"Site Sans","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
