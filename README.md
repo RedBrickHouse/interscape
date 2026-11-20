@@ -20,7 +20,7 @@ GitHub Pages serves the root of the `main` branch. The review version retains `n
 
 ## Presentation
 
-The opening plays a one-second excerpt from the official trailer. A click, tap or the Space key shifts K’s lobby from the chandelier to the wall seal. With reduced motion or data saving enabled, the scene changes using stills. Other sections present the story of Oracle, playable excerpts, studio news and game information.
+The sphere in the opening screenshot is the entry to three dream scenes. Select the sphere or a still to open a scene. A return button and Escape bring back the cover. On touchscreens, swipe to change the open scene. Reduced motion displays the same artwork with a direct cut. The body includes the story of Oracle, three playable excerpts, studio news and platform details.
 
 The former review address `atlas/` forwards to the homepage, including supported language and section links. The original layout is archived at `atlas/dream-atlas.html`.
 

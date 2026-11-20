@@ -5,7 +5,8 @@
   const source = player.querySelector("source");
   const reels = {
     corridor: { video: "media/v3-action-play.mp4", poster: "img/v3-action-poster.webp" },
-    room: { video: "media/action-play.mp4", poster: "img/action-play-ui-poster.webp" }
+    room: { video: "media/action-play.mp4", poster: "img/action-play-ui-poster.webp" },
+    snap: { video: "shift/art/shift.mp4", poster: "shift/art/before.webp" }
   };
   const specs = document.querySelector("[data-cut-store-language]");
   function updateStoreLink() {

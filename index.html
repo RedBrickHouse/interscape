@@ -4,167 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#111110">
+  <meta name="theme-color" content="#1a1920">
   <title>INTER•SCAPE | 인터스케이프</title>
-  <meta name="description" content="손가락을 튕겨 두 꿈을 오가세요. 타인의 꿈으로 들어가는 요원 케이의 스토리 액션 어드벤처, INTER•SCAPE.">
-  <meta property="og:title" content="INTER•SCAPE">
-  <meta property="og:description" content="타인의 꿈에 들어가는 다이브 요원 케이. ROOMTONE Games의 스토리 액션 어드벤처.">
+  <meta name="description" content="드림머신 오라클에 접속한 사람들이 깨어나지 않는다. 다이브 요원 케이는 그들을 깨우러 꿈에 들어간다. 룸톤게임즈의 액션 어드벤처 INTER•SCAPE.">
+  <meta property="og:title" content="INTER•SCAPE"><meta property="og:type" content="website">
+  <meta property="og:description" content="드림머신 오라클에 접속한 사람들이 깨어나지 않는다. 다이브 요원 케이는 그들을 깨우러 꿈에 들어간다. 룸톤게임즈의 액션 어드벤처 INTER•SCAPE.">
   <meta property="og:url" content="https://redbrickhouse.gg/interscape/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://redbrickhouse.gg/interscape/shift/art/before.webp">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23cec6ac'/%3E%3Ccircle cx='32' cy='32' r='24' fill='%231a1916'/%3E%3C/svg%3E">
-  <link rel="preload" as="image" href="shift/art/before.webp">
-  <link rel="stylesheet" href="shift/main.css">
-  <link rel="stylesheet" href="shift/body.css">
-  <link rel="stylesheet" href="shift/worlds.css">
-  <script src="shift/body-copy.js" defer></script>
-  <script src="shift/main.js" defer></script>
-  <script src="shift/body.js" defer></script>
-  <script src="shift/worlds.js" defer></script>
+  <meta property="og:image" content="https://redbrickhouse.gg/interscape/img/threshold.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23afaaba'/%3E%3Ccircle cx='32' cy='32' r='22' fill='%23151920'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="img/threshold.webp">
+  <link rel="stylesheet" href="dive/cover.css"><link rel="stylesheet" href="dive/chapters.css">
+  <script src="shift/body-copy.js?v=orb-1" defer></script><script src="dive/cover.js" defer></script><script src="shift/body.js?v=orb-1" defer></script>
 </head>
 <body data-dream="first">
-<a class="skip-cut" href="#lobby" data-t="skip">본문으로</a>
-<header class="mast">
-  <div class="rail">
-    <a class="maker" href="https://www.roomtonegames.com/" target="_blank" rel="noopener" aria-label="ROOMTONE Games"><img src="img/roomtone-logo.png" alt="ROOMTONE Games" width="1920" height="1080"></a>
-    <nav aria-label="주 메뉴" data-aria="nav"><a href="#story" data-t="storyNav">이야기</a><a href="#gameplay" data-t="playNav">게임플레이</a><a href="#journal" data-t="journalNav">개발 소식</a><a href="#information" data-t="infoNav">게임 정보</a></nav>
-    <div class="utilities">
-      <label class="lang-picker"><span class="sr" data-t="language">언어</span><select id="language"><option value="ko">한국어</option><option value="en">English</option><option value="zh">简体中文</option></select></label>
-      <a class="mast-steam" href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener">Steam <span aria-hidden="true">↗</span></a>
-    </div>
-  </div>
+<a class="skip" href="#top" data-t="skip">본문으로</a>
+<header class="spine">
+  <a class="studio" href="https://www.roomtonegames.com/" target="_blank" rel="noopener"><img src="img/roomtone-logo.png" alt="ROOMTONE Games" width="1920" height="1080"></a>
+  <a class="home" href="#lobby"><img src="img/logo.png" alt="INTER•SCAPE" width="1642" height="252"></a>
+  <label class="language"><span class="sr" data-t="language">언어</span><select id="language"><option value="ko">한국어</option><option value="en">English</option><option value="zh">简体中文</option></select></label>
 </header>
 <main id="top">
-  <section id="lobby" aria-labelledby="game-title">
-    <div class="projection" data-mode="first">
-      <div class="negative" aria-hidden="true">
-        <img class="exposure first" src="shift/art/before.webp" width="1920" height="1080" fetchpriority="high" alt="">
-        <img class="exposure other" src="shift/art/after.webp" width="1920" height="1080" alt="">
-        <video id="snap-film" muted playsinline preload="none" disablepictureinpicture aria-hidden="true"></video>
-        <span class="foot-shade"></span>
+<section class="cover" id="lobby" aria-labelledby="game-title">
+  <div class="frame" data-inside="false" data-scene="halo">
+    <div class="optics">
+      <img class="terrain" src="img/threshold.webp" width="1920" height="1080" fetchpriority="high" alt="">
+      <div class="window" aria-hidden="true">
+        <img class="dream-image active" id="photo-halo" src="dive/art/halo.webp" data-src="dive/art/halo.webp" alt="" width="1920" height="1080">
+        <img class="dream-image" id="photo-goggles" data-src="dive/art/goggles.webp" alt="" width="1920" height="1080" hidden>
+        <img class="dream-image" id="photo-screens" data-src="dive/art/screens.webp" alt="" width="1920" height="1080" hidden>
       </div>
-      <div class="film-face rail">
-        <h1 id="game-title"><img src="img/logo.png" alt="INTER•SCAPE" width="1642" height="252"></h1>
-        <div class="hand-control">
-          <button type="button" id="snap" hidden aria-describedby="snap-description">
-            <kbd aria-hidden="true">Space</kbd><span id="snap-label" data-t="snap">손가락 튕기기</span>
-          </button>
-          <span class="sr" id="snap-description" data-t="description">케이의 손짓에 따라 같은 로비가 다른 꿈으로 바뀝니다.</span>
-          <span class="sr" id="scene-live" role="status"></span>
-        </div>
-      </div>
+      <div class="globe-shade" aria-hidden="true"></div>
+      <div class="ground" aria-hidden="true"></div>
+      <h1 id="game-title"><span class="sr">INTER•SCAPE</span><span class="word first" aria-hidden="true"></span><span class="word last" aria-hidden="true"></span></h1>
+      <button type="button" id="enter" aria-describedby="portal-desc" hidden><span class="entry-label"><span data-t="enter">꿈에 들어가기</span><i aria-hidden="true">↗</i></span></button>
+      <span id="portal-desc" class="sr" data-t="portalDesc">검은 구체 안의 장면을 화면 가득 엽니다.</span>
+      <span class="sr" id="visual-description" role="img" aria-label="붉은 꽃밭에 선 우주복 차림의 인물 위로 거대한 구체가 떠 있다."></span>
+      <span class="sr" role="status" id="scene-status"></span>
     </div>
-    <div class="release-strip rail">
-      <div class="opening-line">
-        <p data-t="premise">잠든 사람들을 깨우기 위해, 케이는 타인의 꿈에 들어간다.</p>
-        <p class="platform"><span>PC</span><i aria-hidden="true"></i><span>PlayStation 5</span><i aria-hidden="true"></i><span data-t="release">출시 예정</span></p>
-      </div>
-      <div class="cover-links">
-        <a class="watch" data-trailer href="https://www.youtube.com/watch?v=OuanYzbB6oQ"><span class="play" aria-hidden="true"></span><span data-t="trailer">공식 트레일러</span></a>
-        <a class="wish" href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener"><span data-t="wish">Steam에서 찜하기</span><span aria-hidden="true">↗</span></a>
-      </div>
+    <nav class="cover-nav" aria-label="주 메뉴" data-aria="nav"><a href="#story" data-t="storyNav">이야기</a><a href="#gameplay" data-t="playNav">게임플레이</a><a href="#journal" data-t="journalNav">소식</a><a href="#information" data-t="infoNav">게임 정보</a></nav>
+    <button class="return" id="leave" type="button" hidden><span aria-hidden="true">↶</span><span data-t="leave">꿈에서 나오기</span></button>
+    <div class="cover-foot">
+      <div class="scene-title" hidden><span id="scene-name">빛의 고리</span><a id="full-photo" href="dive/art/halo.webp" target="_blank" rel="noopener"><span data-t="fullPhoto">전체 스크린샷</span> ↗</a></div>
+      <div class="release"><p class="credit" data-t="credit">룸톤게임즈의 액션 어드벤처</p><p class="platform"><span>PC</span><b aria-hidden="true">/</b><span>PlayStation 5</span><b aria-hidden="true">/</b><span data-t="release">출시 예정</span></p></div>
+      <div class="film-links"><a class="trailer" data-trailer href="https://www.youtube.com/watch?v=OuanYzbB6oQ"><i aria-hidden="true"></i><span data-t="trailer">트레일러</span></a><a class="wishlist" href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener"><span data-t="wish">Steam에서 찜하기</span><span aria-hidden="true">↗</span></a></div>
     </div>
-  </section>
+  </div>
+  <div class="stills" id="worlds" role="group" aria-label="꿈 장면 선택" data-aria="choose" hidden>
+    <button data-photo="halo" aria-pressed="true" type="button"><span class="thumb"><img src="dive/art/halo-thumb.webp" alt="" width="144" height="80"></span><span data-t="halo">빛의 고리</span></button>
+    <button data-photo="goggles" aria-pressed="false" type="button"><span class="thumb"><img src="dive/art/goggles-thumb.webp" alt="" width="144" height="80"></span><span data-t="goggles">모자 쓴 곰</span></button>
+    <button data-photo="screens" aria-pressed="false" type="button"><span class="thumb"><img src="dive/art/screens-thumb.webp" alt="" width="144" height="80"></span><span data-t="screens">녹색 모니터</span></button>
+  </div>
+</section>
 <section class="cut-story" id="story" aria-labelledby="cut-story-title">
   <figure class="cut-street">
     <div class="cut-street-frames">
       <img class="cut-here" src="img/city.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="" />
       <img class="cut-other" src="img/v3-hero-sphere.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="" />
     </div>
-    <figcaption><span class="cut-here" data-t="cutStreet">아무도 걷지 않는 거리. 사람들의 몸만 공중에 떠 있다.</span><span class="cut-other" data-t="cutSphere">구름을 뚫고 나타난 검은 구체가 도시 위를 덮고 있다.</span></figcaption>
+    <figcaption class="sr"><span class="cut-here" data-t="cutStreet">도심의 빈 도로 위로 사람들이 떠 있다.</span><span class="cut-other" data-t="cutSphere">건물들 위로 거대한 검은 구체가 떠 있다.</span></figcaption>
   </figure>
   <div class="cut-wrap cut-story-credit">
-    <h2 id="cut-story-title"><span data-t="cutAfter1">검은 구체가</span><span data-t="cutAfter2">나타난 뒤.</span></h2>
-    <div class="cut-voice"><p data-t="cutOracle">블루닷의 드림머신 ‘오라클’에 접속하면 누구나 원하는 꿈을 꿀 수 있었다. 지구 상공에 검은 구체가 나타난 날, 사람들은 더 이상 꿈에서 깨어나지 않았다.</p>
-    <p data-t="cutDive">깨어 있는 사람이 그들을 찾으려면, 잠든 이의 꿈속으로 들어가야 한다.</p></div>
+    <h2 id="cut-story-title" data-t="cutOracleTitle">드림머신 오라클</h2>
+    <div class="cut-voice"><p data-t="cutOracle">블루닷의 오라클에선 꾸고 싶은 꿈을 고를 수 있었다. 하늘에 검은 구체가 나타난 날, 오라클에 접속한 사람들이 잠에서 깨어나지 않았다.</p></div>
   </div>
 </section>
 <section class="cut-play" id="gameplay" aria-labelledby="cut-play-title">
   <div class="cut-wrap">
     <div class="cut-k">
-      <figure><img src="img/v3-agent-k.webp" width="1920" height="1080" alt="" loading="lazy" decoding="async" /><figcaption data-t="cutKCredit">다이브 요원, 케이</figcaption></figure>
-      <div class="cut-kwords"><h2 id="cut-play-title"><span data-t="cutK1">케이는 타인의</span><span data-t="cutK2">꿈에 들어간다.</span></h2>
-        <p data-t="cutAbility">케이가 쓸 수 있는 능력은 꿈의 주인이 바뀔 때마다 달라진다. 어떤 꿈에서는 시간을 조작해 퍼즐을 풀고, 또 다른 꿈에서는 인간이 아닌 존재의 몸으로 움직인다.</p>
+      <figure><img src="img/v3-agent-k.webp" width="1920" height="1080" alt="" loading="lazy" decoding="async" /></figure>
+      <div class="cut-kwords"><h2 id="cut-play-title" data-t="cutKTitle">다이브 요원 케이</h2>
+        <p data-t="cutAbility">케이는 사람들을 깨울 방법을 찾아 남의 꿈에 들어간다. 누구의 꿈이냐에 따라 시간을 조종해 퍼즐을 풀기도 하고, 다른 모습으로 변신하기도 한다.</p>
       </div>
     </div>
     <figure class="cut-film" data-cut-cinema>
-      <div class="cut-takes" role="group" aria-label="게임플레이 영상 선택" data-aria="cutTakes">
+      <div class="cut-takes" role="group" aria-label="플레이 장면 선택" data-aria="cutTakes">
       <button type="button" aria-pressed="true" aria-controls="cut-player" data-cut-reel="corridor" data-t="cutCorridor">늘어나는 복도</button>
       <button type="button" aria-pressed="false" aria-controls="cut-player" data-cut-reel="room" data-t="cutRoom">기울어진 방</button>
+      <button type="button" aria-pressed="false" aria-controls="cut-player" data-cut-reel="snap" data-t="cutSnap">손가락 튕기기</button>
     </div>
     <div class="cut-screen">
-        <video id="cut-player" controls playsinline preload="none" poster="img/v3-action-poster.webp" width="1280" height="720" aria-label="케이의 액션 플레이 영상" data-aria="cutVideo"><source src="media/v3-action-play.mp4" type="video/mp4"></video>
+        <video id="cut-player" aria-describedby="cut-scene-description" controls playsinline preload="none" poster="img/v3-action-poster.webp" width="1280" height="720" aria-label="게임플레이 영상" data-aria="cutVideo"><source src="media/v3-action-play.mp4" type="video/mp4"></video>
       </div>
-      <figcaption><span data-t="cutFootage">게임플레이 발췌</span><p data-cut-note="corridor" data-t="cutClip">케이가 손을 뻗자 복도 끝이 순식간에 멀어진다.</p><p data-cut-note="room" data-t="cutRoomClip" hidden>보랏빛 방 안에서 발밑의 바닥이 기울어진다.</p></figcaption>
+      <figcaption class="sr" id="cut-scene-description"><p data-cut-note="corridor" data-t="cutClip">케이가 팔을 뻗자 복도 맞은편 벽이 멀어진다.</p><p data-cut-note="room" data-t="cutRoomClip" hidden>보랏빛 방에서 케이가 선 바닥이 한쪽으로 기운다.</p><p data-cut-note="snap" data-t="cutSnapClip" hidden>케이가 손가락을 튕기자 샹들리에가 사라지고 벽에 둥근 문양이 드러난다.</p></figcaption>
     </figure>
-  </div>
-</section>
-<section class="dream-frames" id="worlds" aria-labelledby="frames-title">
-  <div class="cut-wrap">
-    <h2 id="frames-title" data-frame-text="title">케이가 지나온 꿈</h2>
-    <div class="dream-strip" data-selected="1" role="group" aria-labelledby="frames-title">
-      <button data-frame="0" type="button" aria-pressed="false" aria-controls="frame-caption">
-        <img src="img/v3-world-noir.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
-        <span data-frame-text="noir">흑백 골목</span>
-      </button>
-      <button data-frame="1" type="button" aria-pressed="true" aria-controls="frame-caption">
-        <img src="img/neon.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
-        <span data-frame-text="neon">네온 도시</span>
-      </button>
-      <button data-frame="2" type="button" aria-pressed="false" aria-controls="frame-caption">
-        <img src="img/flowers.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
-        <span data-frame-text="field">붉은 꽃밭</span>
-      </button>
-    </div>
-    <p id="frame-caption" aria-live="polite" aria-atomic="true">케이의 발아래로 네온사인이 뒤집힌 듯 펼쳐진다.</p>
   </div>
 </section>
 <section class="cut-journal" id="journal" aria-labelledby="cut-news-title">
   <div class="cut-wrap">
-    <header class="cut-newshead"><h2 id="cut-news-title" data-t="cutStudio">룸톤에서 온 소식</h2><a href="https://store.steampowered.com/news/app/3093160/" target="_blank" rel="noopener"><span data-t="cutAll">전체 소식</span><span aria-hidden="true">↗</span></a></header>
+    <header class="cut-newshead"><h2 id="cut-news-title" data-t="cutStudio">개발 소식</h2><a href="https://store.steampowered.com/news/app/3093160/" target="_blank" rel="noopener"><span data-t="cutAll">Steam 소식 전체 보기</span><span aria-hidden="true">↗</span></a></header>
     <a class="cut-newsfeature" href="https://steamcommunity.com/games/3093160/announcements/detail/690899935132910203" target="_blank" rel="noopener">
       <img src="atlas/gstar-2026.webp" width="800" height="450" alt="" loading="lazy" decoding="async">
-      <div><time datetime="2026-11-13">2026.11.13</time><h3 data-t="cutGstar">지스타 2026 부산 시연 안내</h3><p data-t="cutBooth">룸톤게임즈가 11월 19–22일 부산 벡스코 시연 일정을 공개했습니다. 콘솔게임 공동관은 1관 B01, 레드브릭하우스 부스는 2관 E01입니다.</p></div>
+      <div><time datetime="2026-11-13">2026.11.13</time><h3 data-t="cutGstar">지스타 2026 시연 부스 안내</h3><p data-t="cutBooth">11월 19~22일 부산 벡스코. 시연 부스는 1관 B01(콘솔게임 공동관)과 2관 E01(레드브릭하우스)입니다.</p></div>
       <span class="cut-arrow" aria-hidden="true">↗</span>
     </a>
-    <a class="cut-newsline" href="https://store.steampowered.com/news/app/3093160/view/678511862081388592" target="_blank" rel="noopener"><time datetime="2026-10-07">2026.10.07</time><h3 data-t="cutTokyoBack">도쿄게임쇼 현장과 첫 번째 골드 트로피</h3><span class="cut-arrow" aria-hidden="true">↗</span></a>
-    <a class="cut-newsline" href="https://store.steampowered.com/news/app/3093160/view/705530923042471953" target="_blank" rel="noopener"><time datetime="2026-09-09">2026.09.09</time><h3 data-t="cutTokyo">도쿄게임쇼 시연 빌드에 새 챕터를 담았습니다</h3><span class="cut-arrow" aria-hidden="true">↗</span></a>
+    <a class="cut-newsline" href="https://store.steampowered.com/news/app/3093160/view/678511862081388592" target="_blank" rel="noopener"><time datetime="2026-10-07">2026.10.07</time><h3 data-t="cutTokyoBack">도쿄게임쇼 현장에서 받은 SELECTED INDIE 80 금상</h3><span class="cut-arrow" aria-hidden="true">↗</span></a>
+    <a class="cut-newsline" href="https://store.steampowered.com/news/app/3093160/view/705530923042471953" target="_blank" rel="noopener"><time datetime="2026-09-09">2026.09.09</time><h3 data-t="cutTokyo">도쿄게임쇼 시연판에 새 챕터 추가</h3><span class="cut-arrow" aria-hidden="true">↗</span></a>
   </div>
 </section>
 <section class="cut-info" id="information" aria-labelledby="cut-info-title">
   <div class="cut-wrap cut-infoinner">
-    <div><h2 id="cut-info-title" data-t="cutInfo">게임 정보</h2><p class="cut-genre" data-t="cutGenre">싱글플레이 · 스토리 액션 어드벤처</p></div>
+    <div><h2 id="cut-info-title" data-t="cutInfo">게임 정보</h2><p class="cut-genre" data-t="cutGenre">싱글플레이 액션 어드벤처</p></div>
     <div class="cut-questions">
-      <details open><summary><span data-t="cutReleaseQ">플랫폼과 출시 일정</span></summary><p data-t="cutReleaseA">Windows PC와 PlayStation 5로 출시 예정입니다. 출시일은 추후 공개됩니다.</p></details>
-      <details><summary><span data-t="cutLangQ">음성과 자막</span></summary><p data-t="cutLangA">Steam 버전은 한국어를 포함한 30개 언어의 인터페이스와 자막을 지원합니다. 음성은 영어로 제공됩니다.</p></details>
-      <details><summary><span data-t="cutSpecQ">PC 시스템 요구 사항</span></summary>
+      <details open><summary><span data-t="cutReleaseQ">플랫폼 · 출시일</span></summary><p data-t="cutReleaseA">PC(Windows), PlayStation 5. 출시일 미정.</p></details>
+      <details><summary><span data-t="cutLangQ">Steam판 지원 언어</span></summary><p data-t="cutLangA">영어 음성. 메뉴와 자막은 한국어를 포함해 30개 언어를 지원합니다.</p></details>
+      <details><summary><span data-t="cutSpecQ">PC 사양</span></summary>
         <dl class="cut-specs">
           <dt data-t="cutMinimum">최소</dt><dd><span data-t="cutMinOS">Windows 10 64비트 · 8 GB RAM</span><span data-t="cutMinCPU">Intel Core i7-8700K / AMD Ryzen 5 1600X</span><span data-t="cutMinGPU">GeForce GTX 1060 6 GB / Radeon RX 5600 XT 6 GB / Intel Arc A380 6 GB</span></dd>
           <dt data-t="cutRecommended">권장</dt><dd><span data-t="cutRecOS">Windows 10/11 64비트 · 16 GB RAM</span><span>Intel Core i7-9700K / AMD Ryzen 7 3700X</span><span>GeForce RTX 3060 / Radeon RX 6600 XT</span></dd>
         </dl>
-        <p class="cut-sharedspec" data-t="cutShared">공통 사양은 DirectX 12, 저장 공간 20 GB입니다.</p>
-        <p><a data-cut-store-language href="https://store.steampowered.com/app/3093160/INTERSCAPE/?l=koreana#sysreq_anchor" target="_blank" rel="noopener"><span data-t="cutSpecs">Steam에서 최소·권장 사양 확인</span> <span aria-hidden="true">↗</span></a></p></details>
+        <p class="cut-sharedspec" data-t="cutShared">DirectX 12 · 여유 공간 20 GB</p>
+        <p><a data-cut-store-language href="https://store.steampowered.com/app/3093160/INTERSCAPE/?l=koreana#sysreq_anchor" target="_blank" rel="noopener"><span data-t="cutSpecs">Steam에서 사양 보기</span> <span aria-hidden="true">↗</span></a></p></details>
     </div>
   </div>
 </section>
 <div class="cut-end">
-  <img class="cut-endshot" src="img/threshold.webp" width="1920" height="1080" alt="" loading="lazy" decoding="async" />
+  <img class="cut-endshot" src="dive/art/cave.webp" width="1920" height="1080" alt="" loading="lazy" decoding="async" />
   <div class="cut-endcontent">
     <img class="cut-endtitle" src="img/logo.png" width="1642" height="252" alt="INTER•SCAPE" loading="lazy" decoding="async" />
-    <div class="cut-endlinks"><a href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener"><span data-t="cutWish">Steam 찜하기</span><span aria-hidden="true">↗</span></a>
+    <div class="cut-endlinks"><a href="https://store.steampowered.com/app/3093160/INTERSCAPE/" target="_blank" rel="noopener"><span data-t="cutWish">Steam에서 찜하기</span><span aria-hidden="true">↗</span></a>
     <a href="https://store.playstation.com/en-us/concept/10015911" target="_blank" rel="noopener"><span>PlayStation Store</span><span aria-hidden="true">↗</span></a></div>
   </div>
 </div>
 </main>
 <footer class="cut-footer"><div class="cut-wrap cut-footerinner">
   <div class="cut-studios"><a href="https://redbrickhouse.gg/" target="_blank" rel="noopener"><img src="img/rbh-logo.svg" width="228" height="66" alt="RED BRICK HOUSE" loading="lazy" decoding="async"></a><a href="https://www.roomtonegames.com/" target="_blank" rel="noopener"><img src="img/roomtone-logo.png" width="527" height="185" alt="ROOMTONE Games" loading="lazy" decoding="async"></a></div>
-  <div class="cut-social"><a href="https://x.com/ROOMTONE_Games" target="_blank" rel="noopener" aria-label="ROOMTONE Games — X">X <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/roomtone_games/" target="_blank" rel="noopener" aria-label="ROOMTONE Games — Instagram">Instagram <span aria-hidden="true">↗</span></a></div>
+  <div class="cut-social"><a href="https://discord.gg/6ThJqwuYvJ" target="_blank" rel="noopener" aria-label="ROOMTONE Games (Discord)">Discord <span aria-hidden="true">↗</span></a><a href="https://x.com/ROOMTONE_Games" target="_blank" rel="noopener" aria-label="ROOMTONE Games (X)">X <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/roomtone_games/" target="_blank" rel="noopener" aria-label="ROOMTONE Games (Instagram)">Instagram <span aria-hidden="true">↗</span></a></div>
   <small lang="en">© 2026 ROOMTONE Games. Published by RED BRICK HOUSE.</small>
 </div></footer>
 <dialog id="trailer-modal" aria-labelledby="trailer-title">
-  <header><h2 id="trailer-title" data-t="trailer">공식 트레일러</h2><button type="button" data-close aria-label="닫기" data-aria="close">×</button></header>
+  <header><h2 id="trailer-title" data-t="trailer">트레일러</h2><button type="button" data-close aria-label="닫기" data-aria="close">×</button></header>
   <div class="film-host"></div>
   <a href="https://www.youtube.com/watch?v=OuanYzbB6oQ" target="_blank" rel="noopener" data-t="youtube">YouTube에서 보기 ↗</a>
-</dialog>
-</body>
-</html>
+</dialog></body></html>
